@@ -42,7 +42,7 @@ def main():
     data = []
     if diskinf:
         for device in diskinf:
-            data.append( {"{#DEVICENAME}": device})
+            data.append( {"{#DEVICENAME}": device, "Temperature": get_temperatures(device)})
     print(json.dumps({"data": data}, indent=4))
 
 
